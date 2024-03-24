@@ -10,15 +10,10 @@ pipeline {
         stage("compile java program"){
             steps{
                // sh "javac Demo.java"
-                bat "javac Demo.java"
+                bat "mvn clean package"
             }
         }
-        stage("run the java program"){
-            steps{
-                //sh "java Demo"
-                bat "java Demo"
-            }
-        }
+        
          //stage('Test') {
          //    steps {
         //         sh 'echo "Fail!"; exit 1'
